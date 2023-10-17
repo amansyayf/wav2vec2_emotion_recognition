@@ -14,6 +14,7 @@ In order to reduce date imbalance and overfitting, I applied the simplest data a
 
 ## Results and discussion
 In this work, I explored extracting and modeling features from pretrained Wav2Vec2 model for emotion classification. Trainde weights can be finded [here](https://drive.google.com/drive/folders/1RoH1pZM9VTY1HBQopxk252U_knrRqZ2_?usp=sharing). In order to compare my model I also trained baseline model - simple RandomForestClassifier over eGeMAPS features, which are commonly used in the literature.
+Let's analyse training plots, both models trained quite slowly at the beginning, but then they picked up speed; it seems that by the 10th epoch the models were already begun to achieve convergence.
 Finally comparison was made on test data. It seems that in my case data augmentation helped to learn representation.
 ![model comparison](https://github.com/amansyayf/wav2vec2_emotion_recognition/blob/main/images/metric_table.jpg)
 In the future as part of this work it would be necessary to try to use features from eGeMAPS inside my model and may be to add LSTM layer, because it have shown to provide useful insights for emotion classification task. 
